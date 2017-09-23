@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="arad"
+						  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						  xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+						  xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+	
+	<thing-type id="arad">
+        <label>Arad data</label>
+        <description>Provides communication with Arad data</description>
+
+        <channels>
+            <channel id="last_read" typeId="last_read"/>
+            <channel id="monthly_current_consumption" typeId="monthly_current_consumption"/>
+            <channel id="low_price_consumption_mc" typeId="low_price_consumption_mc"/>
+            <channel id="daily_current_consumption" typeId="daily_current_consumption"/>
+        </channels>
+    </thing-type>
+    
+   
+
+	
+	<channel-type id="last_read">
+		<item-type>Number</item-type>
+		<label>Last Read</label>
+		<description>Arad Last Read</description>
+		<state readOnly="true" pattern="%.3f"/>
+	</channel-type>
+	
+	<channel-type id="monthly_current_consumption">
+        <item-type>Number</item-type>
+        <label>Current Month Consumption</label>
+        <description>Arad Current Monthly Consumption</description>
+        <state readOnly="true" pattern="%.3f"/>
+    </channel-type>
+    
+    <channel-type id="low_price_consumption_mc">
+        <item-type>Number</item-type>
+        <label>Low Price Consumption</label>
+        <description>Arad Low Price Consumption</description>
+        <state readOnly="true" pattern="%.3f"/>
+    </channel-type>
+    
+    <channel-type id="daily_current_consumption">
+        <item-type>Number</item-type>
+        <label>Current Daily Consumption</label>
+        <description>Arad Current Daily Consumption</description>
+        <state readOnly="true" pattern="%.3f"/>
+    </channel-type>
+
+</thing:thing-descriptions>

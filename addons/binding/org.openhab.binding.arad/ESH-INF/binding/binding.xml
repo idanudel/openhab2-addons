@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<binding:binding id="arad"
+				 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				 xmlns:binding="http://eclipse.org/smarthome/schemas/binding/v1.0.0"
+				 xsi:schemaLocation="http://eclipse.org/smarthome/schemas/binding/v1.0.0 http://eclipse.org/smarthome/schemas/binding-1.0.0.xsd">
+
+	<name>Arad Binding</name>
+	<description>This is the binding for Arad.</description>
+	<author>Idanudel</author>
+	
+	 <config-description>
+        <parameter name="email" type="text">
+            <label>E-mail address</label>
+            <description>E-mail address for your Arad web site.</description>
+            <required>true</required>
+        </parameter>
+        <parameter name="password" type="text">
+            <label>Password</label>
+            <description>Password for your Arad web site.</description>
+            <required>true</required>
+        </parameter>
+        <parameter name="device_id" type="integer" min="1000000000000000" max="9999999999999999">
+            <label>Device Id</label>
+            <description>Device Id for your Arad web site.</description>
+            <required>false</required>
+        </parameter>
+         <parameter name="refresh_time_in_min" type="integer">
+            <label>Refresh Time in Minutes</label>
+            <description>Refresh Time in Minutes to update data from Arad site.</description>
+            <required>false</required>
+        </parameter>
+       </config-description>
+       
+       
+
+</binding:binding>
